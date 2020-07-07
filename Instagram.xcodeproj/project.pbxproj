@@ -12,9 +12,9 @@
 		CCE62454561944C6D28F9580 /* Pods_Instagram_InstagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B10AD42E7B3245FE46C4A0A /* Pods_Instagram_InstagramUITests.framework */; };
 		ED2A5B7F24B3E0F40012D280 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2A5B7E24B3E0F40012D280 /* LoginViewController.m */; };
 		ED2A5B8224B3E3C50012D280 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2A5B8124B3E3C50012D280 /* FeedViewController.m */; };
+		ED2A5B8824B50F420012D280 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2A5B8724B50F420012D280 /* ViewController.m */; };
 		EDA8CF7324B3D428000733B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA8CF7224B3D428000733B0 /* AppDelegate.m */; };
 		EDA8CF7624B3D428000733B0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA8CF7524B3D428000733B0 /* SceneDelegate.m */; };
-		EDA8CF7924B3D428000733B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA8CF7824B3D428000733B0 /* ViewController.m */; };
 		EDA8CF7C24B3D428000733B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA8CF7A24B3D428000733B0 /* Main.storyboard */; };
 		EDA8CF7E24B3D429000733B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA8CF7D24B3D429000733B0 /* Assets.xcassets */; };
 		EDA8CF8124B3D429000733B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA8CF7F24B3D429000733B0 /* LaunchScreen.storyboard */; };
@@ -54,13 +54,13 @@
 		ED2A5B7E24B3E0F40012D280 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		ED2A5B8024B3E3C50012D280 /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FeedViewController.h; path = Instagram/FeedViewController.h; sourceTree = SOURCE_ROOT; };
 		ED2A5B8124B3E3C50012D280 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FeedViewController.m; path = Instagram/FeedViewController.m; sourceTree = SOURCE_ROOT; };
+		ED2A5B8624B50F420012D280 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../../.Trash/ViewController.h; sourceTree = "<group>"; };
+		ED2A5B8724B50F420012D280 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../../.Trash/ViewController.m; sourceTree = "<group>"; };
 		EDA8CF6E24B3D428000733B0 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA8CF7124B3D428000733B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDA8CF7224B3D428000733B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EDA8CF7424B3D428000733B0 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		EDA8CF7524B3D428000733B0 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		EDA8CF7724B3D428000733B0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EDA8CF7824B3D428000733B0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EDA8CF7B24B3D428000733B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDA8CF7D24B3D429000733B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDA8CF8024B3D429000733B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -166,8 +166,8 @@
 				EDA8CF7224B3D428000733B0 /* AppDelegate.m */,
 				EDA8CF7424B3D428000733B0 /* SceneDelegate.h */,
 				EDA8CF7524B3D428000733B0 /* SceneDelegate.m */,
-				EDA8CF7724B3D428000733B0 /* ViewController.h */,
-				EDA8CF7824B3D428000733B0 /* ViewController.m */,
+				ED2A5B8624B50F420012D280 /* ViewController.h */,
+				ED2A5B8724B50F420012D280 /* ViewController.m */,
 				EDA8CF7A24B3D428000733B0 /* Main.storyboard */,
 				EDA8CF7D24B3D429000733B0 /* Assets.xcassets */,
 				EDA8CF7F24B3D429000733B0 /* LaunchScreen.storyboard */,
@@ -433,7 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDA8CF7924B3D428000733B0 /* ViewController.m in Sources */,
+				ED2A5B8824B50F420012D280 /* ViewController.m in Sources */,
 				EDA8CF7324B3D428000733B0 /* AppDelegate.m in Sources */,
 				EDA8CF8424B3D429000733B0 /* main.m in Sources */,
 				EDA8CF7624B3D428000733B0 /* SceneDelegate.m in Sources */,

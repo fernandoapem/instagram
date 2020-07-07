@@ -47,6 +47,22 @@
 }
 - (IBAction)tapOnLogIn:(id)sender {
     
+    NSString *username = self.usernameField.text;
+    NSString *password = self.passwordField.text;
+    if([self.usernameField.text isEqual:@""]||[self.passwordField.text isEqual:@""])
+       {
+           [self fetchEmptyAlert];
+       }
+    [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
+        if (error != nil) {
+            [self fetchErrorAlert:error.localizedDescription];
+        } else {
+            NSLog(@"User logged in successfully");
+            [self performSegueWithIdentifier:@"loginSegue" sender:nil];
+        }
+    }];
+    
+    
 }
 
 -(void) fetchEmptyAlert
