@@ -13,6 +13,8 @@
 		ED2A5B7F24B3E0F40012D280 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2A5B7E24B3E0F40012D280 /* LoginViewController.m */; };
 		ED2A5B8224B3E3C50012D280 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2A5B8124B3E3C50012D280 /* FeedViewController.m */; };
 		ED2A5B8824B50F420012D280 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2A5B8724B50F420012D280 /* ViewController.m */; };
+		ED2A5B8B24B522AB0012D280 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2A5B8A24B522AB0012D280 /* ComposeViewController.m */; };
+		ED2A5B8F24B52FBB0012D280 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2A5B8E24B52FBB0012D280 /* Post.m */; };
 		EDA8CF7324B3D428000733B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA8CF7224B3D428000733B0 /* AppDelegate.m */; };
 		EDA8CF7624B3D428000733B0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA8CF7524B3D428000733B0 /* SceneDelegate.m */; };
 		EDA8CF7C24B3D428000733B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA8CF7A24B3D428000733B0 /* Main.storyboard */; };
@@ -56,6 +58,10 @@
 		ED2A5B8124B3E3C50012D280 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FeedViewController.m; path = Instagram/FeedViewController.m; sourceTree = SOURCE_ROOT; };
 		ED2A5B8624B50F420012D280 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../../.Trash/ViewController.h; sourceTree = "<group>"; };
 		ED2A5B8724B50F420012D280 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../../.Trash/ViewController.m; sourceTree = "<group>"; };
+		ED2A5B8924B522AB0012D280 /* ComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		ED2A5B8A24B522AB0012D280 /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
+		ED2A5B8D24B52FBB0012D280 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		ED2A5B8E24B52FBB0012D280 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		EDA8CF6E24B3D428000733B0 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA8CF7124B3D428000733B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDA8CF7224B3D428000733B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -128,12 +134,23 @@
 		ED2A5B7C24B3E0A70012D280 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ED2A5B8924B522AB0012D280 /* ComposeViewController.h */,
+				ED2A5B8A24B522AB0012D280 /* ComposeViewController.m */,
 				ED2A5B8024B3E3C50012D280 /* FeedViewController.h */,
 				ED2A5B8124B3E3C50012D280 /* FeedViewController.m */,
 				ED2A5B7D24B3E0F40012D280 /* LoginViewController.h */,
 				ED2A5B7E24B3E0F40012D280 /* LoginViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		ED2A5B8C24B52F8D0012D280 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED2A5B8D24B52FBB0012D280 /* Post.h */,
+				ED2A5B8E24B52FBB0012D280 /* Post.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		EDA8CF6524B3D428000733B0 = {
@@ -161,6 +178,7 @@
 		EDA8CF7024B3D428000733B0 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				ED2A5B8C24B52F8D0012D280 /* Models */,
 				ED2A5B7C24B3E0A70012D280 /* View Controllers */,
 				EDA8CF7124B3D428000733B0 /* AppDelegate.h */,
 				EDA8CF7224B3D428000733B0 /* AppDelegate.m */,
@@ -437,8 +455,10 @@
 				EDA8CF7324B3D428000733B0 /* AppDelegate.m in Sources */,
 				EDA8CF8424B3D429000733B0 /* main.m in Sources */,
 				EDA8CF7624B3D428000733B0 /* SceneDelegate.m in Sources */,
+				ED2A5B8B24B522AB0012D280 /* ComposeViewController.m in Sources */,
 				ED2A5B8224B3E3C50012D280 /* FeedViewController.m in Sources */,
 				ED2A5B7F24B3E0F40012D280 /* LoginViewController.m in Sources */,
+				ED2A5B8F24B52FBB0012D280 /* Post.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
