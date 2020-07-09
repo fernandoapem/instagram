@@ -24,6 +24,7 @@
 - (void)setPost:(Post *)post {
     _post = post;
     self.postImage.file = post[@"image"];
+    self.usernameLabel.text = post.author.username;
     self.likeLabel.text = [NSString stringWithFormat:@"%@", post[@"likeCount"]];
     self.captionLabel.text = post[@"caption"];
     [self.postImage loadInBackground];

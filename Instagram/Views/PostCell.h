@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet PFImageView *postImage;
 @property (strong, nonatomic) Post *post;
 @property (weak, nonatomic) IBOutlet UILabel *likeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (nonatomic) BOOL liked;
 @property (weak, nonatomic) IBOutlet UILabel *captionLabel;
 @end

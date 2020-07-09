@@ -12,6 +12,7 @@
 #import "LoginViewController.h"
 #import "Post.h"
 #import "PostCell.h"
+#import "DetailsViewController.h"
 
 
 @interface FeedViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -29,9 +30,18 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView insertSubview:refreshControl atIndex:0];
+    
+    [self fetchPosts];
+}
+-(void) fetchPosts
+{
     PFQuery *postQuery = [Post query];
     [postQuery orderByDescending:@"createdAt"];
     [postQuery includeKey:@"author"];
+    
     postQuery.limit = 20;
     
     [postQuery findObjectsInBackgroundWithBlock:^(NSArray<Post *> * _Nullable posts, NSError * _Nullable error) {
@@ -45,6 +55,15 @@
             NSLog(@"%@",error.localizedDescription);
         }
     }];
+}
+- (void)beginRefresh:(UIRefreshControl *)refreshControl {
+
+           // ... Use the new data to update the data source ...
+            [self fetchPosts];
+           // Reload the tableView now that there is new data
+            [self.tableView reloadData];
+           // Tell the refreshControl to stop spinning
+            [refreshControl endRefreshing];
     
 }
 - (IBAction)logOutUser:(id)sender {
@@ -58,15 +77,21 @@
     }];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    UITableViewCell *tappedCell = sender;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    Post *post = self.posts[indexPath.row];
+    DetailsViewController *detailViewController = [segue destinationViewController];
+    detailViewController.post = post;
+    
 }
-*/
+
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     PostCell *cell =  [tableView dequeueReusableCellWithIdentifier:@"PostCell"];
