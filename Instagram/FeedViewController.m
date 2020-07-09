@@ -82,13 +82,16 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([sender isKindOfClass:[UITableViewCell class]]){
     UITableViewCell *tappedCell = sender;
     NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     Post *post = self.posts[indexPath.row];
     DetailsViewController *detailViewController = [segue destinationViewController];
-    detailViewController.post = post;
+        detailViewController.post = post;
+        
+    }
     
 }
 

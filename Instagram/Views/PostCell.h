@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @import Parse;
 @interface PostCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet PFImageView *postImage;
 @property (strong, nonatomic) Post *post;
 @property (weak, nonatomic) IBOutlet UILabel *likeLabel;

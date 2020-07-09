@@ -12,7 +12,7 @@
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
-@property (weak, nonatomic) IBOutlet UITextField *emailField;
+
 
 @end
 
@@ -25,13 +25,13 @@
 - (IBAction)tapOnSignUp:(id)sender {
     PFUser *user = [PFUser user];
     
-    if([self.usernameField.text isEqual:@""]||[self.passwordField.text isEqual:@""]||[self.emailField.text isEqual:@""])
+    if([self.usernameField.text isEqual:@""]||[self.passwordField.text isEqual:@""])
     {
         [self fetchEmptyAlert];
     }
     user.username = self.usernameField.text;
     user.password = self.passwordField.text;
-    user.email = self.emailField.text;
+    
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if(succeeded)
         {

@@ -8,7 +8,7 @@
 
 #import "PostCell.h"
 #import "Post.h"
-
+#import "NSDate+DateTools.h"
 @implementation PostCell
 
 - (void)awakeFromNib {
@@ -27,6 +27,7 @@
     self.usernameLabel.text = post.author.username;
     self.likeLabel.text = [NSString stringWithFormat:@"%@", post[@"likeCount"]];
     self.captionLabel.text = post[@"caption"];
+    self.dateLabel.text = [self.post.createdAt timeAgoSinceNow];
     [self.postImage loadInBackground];
 }
 
