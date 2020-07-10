@@ -75,7 +75,7 @@
 
 - (IBAction)onShareTap:(id)sender {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    UIImage *resized = [self resizeImage:self.postImage.image withSize:CGSizeMake(100.0, 100.0)];
+    UIImage *resized = [self resizeImage:self.postImage.image withSize:CGSizeMake(2000.0, 2000.0)];
     [Post postUserImage:resized withCaption:self.captionTextView.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
         if(succeeded){
             NSLog(@"Post Success!");
