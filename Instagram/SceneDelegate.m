@@ -29,8 +29,8 @@
         
        UIViewController *feedViewController = [storyboard instantiateViewControllerWithIdentifier:@"FeedViewController"];
        self.window.rootViewController = feedViewController;
-       UIViewController *feedNavigationController = [storyboard instantiateViewControllerWithIdentifier:@"FeedNavigationController"];
-       self.window.rootViewController = feedNavigationController;
+       UITabBarController *tabBaViewController = [storyboard instantiateViewControllerWithIdentifier:@"TabNavigationController"];
+       self.window.rootViewController = tabBaViewController;
     }
 }
 

@@ -17,6 +17,8 @@
 		ED2A5B8F24B52FBB0012D280 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2A5B8E24B52FBB0012D280 /* Post.m */; };
 		ED2A5B9924B659B80012D280 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2A5B9824B659B80012D280 /* PostCell.m */; };
 		ED2A5B9C24B67C6C0012D280 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2A5B9B24B67C6C0012D280 /* DetailsViewController.m */; };
+		ED2A5B9F24B8DB520012D280 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2A5B9E24B8DB520012D280 /* ProfileViewController.m */; };
+		ED2A5BA524B905810012D280 /* UserProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2A5BA424B905810012D280 /* UserProfileCell.m */; };
 		EDA8CF7324B3D428000733B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA8CF7224B3D428000733B0 /* AppDelegate.m */; };
 		EDA8CF7624B3D428000733B0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA8CF7524B3D428000733B0 /* SceneDelegate.m */; };
 		EDA8CF7C24B3D428000733B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA8CF7A24B3D428000733B0 /* Main.storyboard */; };
@@ -68,6 +70,10 @@
 		ED2A5B9824B659B80012D280 /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
 		ED2A5B9A24B67C6C0012D280 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		ED2A5B9B24B67C6C0012D280 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		ED2A5B9D24B8DB520012D280 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		ED2A5B9E24B8DB520012D280 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		ED2A5BA324B905810012D280 /* UserProfileCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserProfileCell.h; sourceTree = "<group>"; };
+		ED2A5BA424B905810012D280 /* UserProfileCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserProfileCell.m; sourceTree = "<group>"; };
 		EDA8CF6E24B3D428000733B0 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA8CF7124B3D428000733B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDA8CF7224B3D428000733B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -148,6 +154,8 @@
 				ED2A5B7E24B3E0F40012D280 /* LoginViewController.m */,
 				ED2A5B9A24B67C6C0012D280 /* DetailsViewController.h */,
 				ED2A5B9B24B67C6C0012D280 /* DetailsViewController.m */,
+				ED2A5B9D24B8DB520012D280 /* ProfileViewController.h */,
+				ED2A5B9E24B8DB520012D280 /* ProfileViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -166,6 +174,8 @@
 			children = (
 				ED2A5B9724B659B80012D280 /* PostCell.h */,
 				ED2A5B9824B659B80012D280 /* PostCell.m */,
+				ED2A5BA324B905810012D280 /* UserProfileCell.h */,
+				ED2A5BA424B905810012D280 /* UserProfileCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -477,6 +487,8 @@
 				ED2A5B8B24B522AB0012D280 /* ComposeViewController.m in Sources */,
 				ED2A5B9924B659B80012D280 /* PostCell.m in Sources */,
 				ED2A5B8224B3E3C50012D280 /* FeedViewController.m in Sources */,
+				ED2A5BA524B905810012D280 /* UserProfileCell.m in Sources */,
+				ED2A5B9F24B8DB520012D280 /* ProfileViewController.m in Sources */,
 				ED2A5B7F24B3E0F40012D280 /* LoginViewController.m in Sources */,
 				ED2A5B8F24B52FBB0012D280 /* Post.m in Sources */,
 			);
