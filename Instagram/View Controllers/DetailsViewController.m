@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet PFImageView *postImage;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *likeCountLabel;
+@property (weak, nonatomic) IBOutlet UIButton *likeButton;
 
 @end
 
@@ -31,6 +32,7 @@
     self.postImage.file = self.post.image;
     self.likeCountLabel.text = [NSString stringWithFormat:@"%@", self.post.likeCount];
     self.timeLabel.text = [self.post.createdAt timeAgoSinceNow];
+    [self.likeButton setSelected:self.post.liked];
     
 }
 

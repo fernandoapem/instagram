@@ -29,7 +29,28 @@
     self.captionLabel.text = post[@"caption"];
     self.timeLabel.text = [self.post.createdAt timeAgoSinceNow];
     [self.postPicture loadInBackground];
+    [self.likeButton setSelected:self.post.liked];
 }
 
 
+- (IBAction)didTapLike:(id)sender {
+ 
+    if(!self.post.liked)
+      {
+          self.post.liked = YES;
+          int value = [self.post.likeCount intValue];
+          self.post.likeCount = [NSNumber numberWithInt:value + 1];
+          [self.post saveInBackground];
+          [self setPost:self.post];
+      }
+      else
+      {
+          self.post.liked = NO;
+          int value = [self.post.likeCount intValue];
+          self.post.likeCount = [NSNumber numberWithInt:value - 1];
+          [self.post saveInBackground];
+          [self setPost:self.post];
+          
+      }
+}
 @end

@@ -13,7 +13,7 @@
 #import "Post.h"
 #import "PostCell.h"
 #import "DetailsViewController.h"
-
+#import "MBProgressHUD.h"
 
 @interface FeedViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
@@ -46,6 +46,7 @@
     
     [postQuery findObjectsInBackgroundWithBlock:^(NSArray<Post *> * _Nullable posts, NSError * _Nullable error) {
         if (posts) {
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             // do something with the data fetched
             self.posts = posts.mutableCopy;
             [self.tableView reloadData];

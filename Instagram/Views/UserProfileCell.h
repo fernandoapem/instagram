@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *likeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *captionLabel;
 @property (strong, nonatomic) Post *post;
+@property (weak, nonatomic) IBOutlet UIButton *likeButton;
+- (IBAction)didTapLike:(id)sender;
 
 @end
 

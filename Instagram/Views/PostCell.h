@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *likeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (nonatomic) BOOL liked;
+@property (weak, nonatomic) IBOutlet UIButton *likeButton;
+- (IBAction)didTapLike:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *captionLabel;
 @end
 
